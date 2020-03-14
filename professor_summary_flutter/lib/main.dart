@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -91,8 +93,23 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Numero de veces que has presionado el boton:',
+            Image.asset(
+                'img/logoPS.jpg',
+              ),
+            TextField(
+              obscureText: false,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'E-mail',
+              ),
+            ),
+            SizedBox(height: 30),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
             ),
             Text(
               '$_counter',
